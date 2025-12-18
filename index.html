@@ -4,17 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ts-val</title>
+    <link rel="stylesheet" href="src/style.css">
   </head>
   <body>
     <main>
       <section>
-        <form novalidate>
-          <label>Имя <input type="text" required></label>
+        <form id="formTest" novalidate>
+          <label>Имя <input id="name" name="name" type="text" required></label>
           <p role="alert" aria-live="assertive"></p>
           <button type="submit">Отправить</button>
         </form>
+
+        <div id="errs"></div>
+        <div id="result"></div>
       </section>
     </main>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="src/main.ts"></script>
   </body>
 </html>
