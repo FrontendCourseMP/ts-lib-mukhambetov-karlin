@@ -8,24 +8,23 @@ const validator = new InValid(form, {autoBindEvents: true})
 
 validator.addField('name', {required: true, minLength: 3})
 
-console.log(validator)
+console.log(validator);
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     const results = validator.validate()
 
     if (!results.valid) {
-        for (const result in results) {
+        for (const result of results.fields.name.errors) {
+        console.log(results)
         errCont.textContent = `Поле ${result}`;
-        console.log('але')
+        // console.log('але');
         return
     }
     }
     
     
-
-    
-
+    console.log(validator.validate())
     resultCont.textContent = 'круто'
 })
 
