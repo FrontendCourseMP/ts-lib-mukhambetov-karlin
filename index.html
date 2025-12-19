@@ -10,8 +10,9 @@
     <main>
       <section>
         <form id="formTest" novalidate>
-          <label>Имя <input id="name" name="name" type="text" required></label>
-          <p role="alert" aria-live="assertive"></p>
+          <label>Имя <input id="name" name="name" type="text" aria-describedby="alertName"></label>
+          <label>Почта <input id="email" name="email" type="text" aria-describedby="alert"></label>
+          <label>Телефон <input id="phone" name="phone" type="text" aria-describedby="alert"></label>
           <button type="submit">Отправить</button>
         </form>
 
@@ -22,3 +23,11 @@
     <script type="module" src="src/main.ts"></script>
   </body>
 </html>
+
+<style>
+  #formTest {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+</style>
