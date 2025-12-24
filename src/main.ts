@@ -6,7 +6,7 @@ const validator = new InValid(form, {autoBindEvents: true})
 
 validator.addField('name', {minLength: 3})
 
-console.log(validator);
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -23,9 +23,4 @@ form.addEventListener('submit', (e) => {
     }
 })
 
-form.addEventListener('InValid:warning', (e: Event) => {
-  const detail = (e as CustomEvent).detail;
-  const div = document.createElement('div');
-  div.textContent = `Warning: ${detail.message}`;
-  div.style.color = 'orange';
-});
+
